@@ -1,0 +1,149 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Barigazzo, Modena, Italy Telemetry</title>
+    <link rel="icon" type="image/png" href="favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="seasons.css"/>
+    <script src="seasons.js"></script>
+  </head>
+
+  <body onload="setup();">
+
+
+<div id="title_bar">
+  <div id="title">
+    <h1 class="page_title">Barigazzo, Modena, Italy</h1>
+    <p class="lastupdate">06/07/25 18:25:00</p>
+  </div>
+  <div id="rss_link"><a href="rss.xml">RSS</a></div>
+  <div id="reports">
+    Monthly Reports:
+    <select name="reports" onchange="openTabularFile(value)">
+      <option value="2025-04">2025-04</option>
+      <option value="2025-05">2025-05</option>
+      <option value="2025-06">2025-06</option>
+      <option value="2025-07">2025-07</option>
+      <option selected>- Select Month -</option>
+    </select>
+    <br/>
+    Yearly Reports:
+    <select name="reports" onchange="openTabularFile(value)">
+      <option value="2025">2025</option>
+      <option selected>- Select Year -</option>
+    </select>
+    <br/>
+  </div>
+</div>
+    
+    <div id="contents">
+      <p><a href="index.html">&#10096; Current Conditions</a></p>
+
+      <div id="widget_group">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id='sensors_widget' class="widget">
+  <div class="widget_title">
+    <a href="telemetry.html">Sensor Status</a>
+    <a class="widget_control" onclick="toggle_widget('sensors')">&diams;</a>
+  </div>
+  <div class="widget_contents">
+  <table>
+
+    <tr><th>Connectivity</th><th></th></tr>
+    <tr>
+      <td class="label">Signal Quality</td>
+      <td class="data">100%</td>
+      <td class="timestamp"> 
+</td>
+    </tr>
+
+    <tr><th>Battery Status</th><th></th></tr>
+    <tr>
+      <td class="label">Outside Temperature Battery</td>
+      <td class="data"><span class="status_ok">OK</span>
+</td>
+      <td class="timestamp"> 
+</td>
+    </tr>
+
+
+  </table>
+  </div>
+
+</div>
+      </div>
+
+      <div id="plot_group">
+        <div id="history_widget" class="widget">
+          <div id="plot_title" class="widget_title">Telemetry:&nbsp;&nbsp;
+            <a class="button_selected" id="button_history_day"
+               onclick="choose_history('day')">Day</a>
+            <a class="button" id="button_history_week"
+               onclick="choose_history('week')">Week</a>
+            <a class="button" id="button_history_month"
+               onclick="choose_history('month')">Month</a>
+            <a class="button" id="button_history_year"
+               onclick="choose_history('year')">Year</a>
+          </div>
+
+          <div id="history_day" class="plot_container" style="display:none">
+            <img src="dayrx.png" alt="dayrx"/>
+          </div>
+          <div id="history_week" class="plot_container" style="display:none">
+            <img src="weekrx.png" alt="weekrx"/>
+          </div>
+          <div id="history_month" class="plot_container" style="display:none">
+            <img src="monthrx.png" alt="monthrx"/>
+          </div>
+          <div id="history_year" class="plot_container" style="display:none">
+            <img src="yearrx.png" alt="yearrx"/>
+          </div>
+
+        </div>
+      </div>
+
+
+<div id='identifier_widget' class="widget">
+  <div class="widget_title">
+  </div>
+  <div class="widget_contents">
+  <table>
+    <tr>
+      <td class="label">Latitude</td>
+      <td class="data">44&deg; 15.89' N</td>
+    </tr>
+    <tr>
+      <td class="label">Longitude</td>
+      <td class="data">010&deg; 39.17' E</td>
+    </tr>
+    <tr>
+      <td class="label">Altitude</td>
+      <td class="data">1217 meters</td>
+    </tr>
+    <tr>
+      <td class="label">WeeWX</td>
+      <td class="data">5.1.0</td>
+    </tr>
+  </table>
+  </div>
+
+</div>
+    </div>
+
+  </body>
+</html>
